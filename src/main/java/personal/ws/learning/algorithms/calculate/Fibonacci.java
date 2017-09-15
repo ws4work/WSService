@@ -1,7 +1,7 @@
 package personal.ws.learning.algorithms.calculate;
 
 /**
- * @Description:
+ * @Description:斐波那契数列
  * @author: 王上
  * @date: 2017/9/14
  * @project：WSService

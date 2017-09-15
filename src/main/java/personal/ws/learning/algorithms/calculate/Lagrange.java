@@ -4,7 +4,7 @@ package personal.ws.learning.algorithms.calculate;
 import java.util.Scanner;
 
 /**
- * @Description:
+ * @Description:拉格朗日插值
  * @author: 王上
  * @date: 2017/9/14
  * @project：WSService
