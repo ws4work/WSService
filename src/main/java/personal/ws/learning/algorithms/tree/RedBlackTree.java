@@ -2,6 +2,7 @@ package personal.ws.learning.algorithms.tree;
 
 import personal.ws.util.Console;
 
+import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -20,10 +21,17 @@ public class RedBlackTree {
     final public static Random random = new Random();
 
     public static void main(String args[]) {
-        Node root = new Node(null, 0, random.nextInt(200), BLACK);
+        Node root = new Node(null, CENTER, random.nextInt(200), BLACK);
 
         Node l1 = new Node(root, LEFT, random.nextInt(200), BLACK);
         Node r1 = new Node(root, RIGHT, random.nextInt(200), BLACK);
+
+//        Node l11 = new Node(null, CENTER, 4, BLACK);
+//        l11.setFather(l1, LEFT);
+//        Node r11 = new Node(r1, CENTER, 6, BLACK);
+//        r11.setFather(l1, LEFT);
+//        Node l12 = new Node(null, CENTER, 5, BLACK);
+//        l12.setFather(l1, RIGHT);
 
         Node l11 = new Node(l1, LEFT, random.nextInt(200), BLACK);
         Node l12 = new Node(l1, RIGHT, random.nextInt(200), BLACK);
@@ -40,13 +48,38 @@ public class RedBlackTree {
         Node r121 = new Node(r12, LEFT, random.nextInt(200), BLACK);
         Node r122 = new Node(r12, RIGHT, random.nextInt(200), BLACK);
 
-
+        printColor(root);
         printTree(root, 1);
+    }
+
+    public static void printColor(Node current) {
+        Node root = getRoot(current);
+        root.setRed(BLACK);
+        printLoop(root, 0);
+    }
+
+    public static void printLoop(Node current, int range) {
+        Node[] children = current.getChildren();
+        for (Node node : children) {
+            if (null != node) {
+                node.setRed(range % 2 == 0 ? BLACK : RED);
+                printLoop(node, range + 1);
+            }
+        }
+    }
+
+    //获取根节点
+    public static Node getRoot(Node current) {
+        Node father = current.getFather();
+        if (null != father) {
+            getRoot(father);
+        }
+        return current;
     }
 
     //打印树
     public static void printTree(Node current, Integer range) {
-        if(hasChild(current)){
+        if (current.hasChild()) {
             Node left = current.getLeft();
             Node right = current.getRight();
             Console.____purple("==第" + range + "层==");
@@ -62,27 +95,20 @@ public class RedBlackTree {
             Console.____cyan("当前节点" + current.toString() + "第" + (range) + "层无子节点");
         }
     }
-
-    //判断是否有孩子节点
-    public static boolean hasChild(Node current) {
-        if(null == current.getLeft() && null == current.getRight()) return false;
-        return true;
-    }
-
 }
 
 class Node {
     private Node father;
     private Node left;
     private Node right;
-    private Integer value;
+    private int value;
     private boolean isRed;
 
-    public Node(Node father, Integer type, Integer value, boolean isRed) {
+    public Node(Node father, int type, Integer value, boolean isRed) {
         this.father = father;
-        if(type == -1){
+        if (type == -1) {
             father.setLeft(this);
-        } else if(type == 1){
+        } else if (type == 1) {
             father.setRight(this);
         } else {
 
@@ -96,23 +122,18 @@ class Node {
         return this.father == null ? true : false;
     }
 
-    //添加父节点
-    public void addFather(Node father) {
-        this.father = father;
-    }
-
     //添加左孩子节点
     public void addLeft(Node left) {
         assert null == this.left;
         this.left = left;
-        left.addFather(this);
+        left.setFather(this, -1);
     }
 
     //添加右孩子节点
     public void addRight(Node right) {
         assert null == this.right;
         this.right = right;
-        right.addFather(this);
+        right.setFather(this, 1);
     }
 
     //添加子节点
@@ -121,12 +142,41 @@ class Node {
         addRight(right);
     }
 
+    //判断是否有孩子节点
+    public boolean hasChild() {
+        if (null == this.left && null == right) return false;
+        return true;
+    }
+
+    //获取孩子节点们
+    public Node[] getChildren() {
+        return new Node[]{(null != this.left) ? this.left : null, (null != this.right) ? this.right : null};
+    }
+
     public Node getFather() {
         return father;
     }
 
-    public void setFather(Node father) {
+    public void setFather(Node father, Integer position) {
         this.father = father;
+        if (null != this.father) {
+            switch (position) {
+                case -1:
+                    if (null == this.father.getLeft())
+                        this.father.setLeft(this);
+                    break;
+                case 0:
+                    System.out.println("Position Error!");
+                    break;
+                case 1:
+                    if (null == this.father.getRight())
+                        this.father.setRight(this);
+                    break;
+                default:
+                    System.out.println("Position Error!");
+                    break;
+            }
+        }
     }
 
     public Node getLeft() {
@@ -165,6 +215,10 @@ class Node {
 
     @Override
     public String toString() {
-        return super.toString().replaceAll("personal.ws.learning.algorithms.tree.Node@","");
+        return super.toString().replaceAll("personal.ws.learning.algorithms.tree.Node@", "");
     }
+}
+
+class RBTree {
+
 }
