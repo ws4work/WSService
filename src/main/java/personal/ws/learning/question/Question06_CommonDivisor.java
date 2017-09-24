@@ -6,7 +6,7 @@ package personal.ws.learning.question;
  * @date: 2017/9/15
  * @project：WSService
  */
-public class Question6_CommonDivisor {
+public class Question06_CommonDivisor {
 
     /**
      * 【程序6】

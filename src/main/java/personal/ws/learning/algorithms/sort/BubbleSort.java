@@ -7,8 +7,6 @@ import personal.ws.learning.algorithms.common.CommonSort;
  * 相邻的两个数依次进行比较和调整，让较大的数往下沉，较小的往上冒。即：每当两相邻的
  * 数比较后发现它们的排序与排序要求相反时，就将它们互换。
  * @author: 王上
- * @date: 2017/9/13
- * @project：WSService
  */
 public class BubbleSort extends CommonSort {
     public static void main(String args[]) {

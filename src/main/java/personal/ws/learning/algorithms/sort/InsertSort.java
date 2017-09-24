@@ -7,8 +7,6 @@ import personal.ws.learning.algorithms.common.CommonSort;
  * 好顺序的，现在要把第n 个数插到前面的有序数中，使得这 n个数
  * 也是排好顺序的。如此反复循环，直到全部排好顺序。
  * @author: 王上
- * @date: 2017/9/13
- * @project：WSService
  */
 public class InsertSort extends CommonSort {
 

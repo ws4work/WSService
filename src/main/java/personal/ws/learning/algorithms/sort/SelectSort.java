@@ -7,8 +7,6 @@ import personal.ws.learning.algorithms.common.CommonSort;
  * 然后在剩下的数当中再找最小的与第二个位置的数交换，如此循环到倒数第二个数和最后一
  * 个数比较为止。
  * @author: 王上
- * @date: 2017/9/13
- * @project：WSService
  */
 public class SelectSort extends CommonSort {
 

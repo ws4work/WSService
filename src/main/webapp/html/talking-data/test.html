@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <!--<script src="http://sdk.talkingdata.com/g/h5/v1/9AF34FA6A6B3443BB5B3446024CCB4D0" type="text/javascript"></script>-->
+
+    <script src="http://sdk.talkingdata.com/g/h5/v1/9AF34FA6A6B3443BB5B3446024CCB4D0" type="text/javascript"></script>
+    <script src="../../js/talking-data/talking_data.js" type="application/javascript"></script>
+    <script type="application/javascript">
+        //登录传入json数据
+        var json = '{"accountId":"123456","accountType":"1"}'
+        //充值订单号
+        var orderid = 'test-order-00000001'
+        //充值产品
+        var iapid='大包'
+        //现金金额
+        var currencyAmount=100
+        //虚拟币金额
+        var virtualCurrencyAmount=1000
+        //支付途径
+        var paymentType='AliPay'
+
+        //原因
+        var cause='赠予'
+
+        //物品id
+        var itemID='cost-00001'
+        //物品数量
+        var itemNumber=2
+        //虚拟币单价
+        var priceInVirtualCurrency=100
+
+        //任务id
+        var missionId='task001'
+        //操作
+        var oper=0
+
+
+        console.log('开始登陆')
+        login(json)
+        console.log('登陆成功')
+
+//        console.log('修改账户信息')
+//        account(json)
+//        console.log('修改账户成功')
+
+        console.log('获取设备id')
+        getDeviceId()
+        console.log('获取设备id成功')
+
+        console.log('发送充值请求')
+        rechargeRequest(orderid,iapid,currencyAmount, virtualCurrencyAmount, paymentType)
+        console.log('发送充值请求成功')
+
+        console.log('发送充值成功请求')
+        rechargeSuccess(orderid)
+        console.log('发送充值成功请求成功')
+
+        console.log('赠予虚拟币')
+        reward(virtualCurrencyAmount,cause)
+        console.log('赠予虚拟币成功')
+
+        console.log('记录付费点')
+        consume(itemID,itemNumber,priceInVirtualCurrency)
+        console.log('记录付费点成功')
+
+        console.log('消耗物品或服务等')
+        expend(itemID,itemNumber)
+        console.log('消耗物品或服务等成功')
+
+        console.log('任务、关卡或副本')
+        task(missionId,cause,oper)
+        console.log('任务、关卡或副本成功')
+
+//        console.log('自定义事件')
+//        event()
+//        console.log('自定义事件成功')
+
+        console.log('退出')
+        exit()
+        console.log('退出成功')
+
+    </script>
+</head>
+<body>
+</body>
+</html>

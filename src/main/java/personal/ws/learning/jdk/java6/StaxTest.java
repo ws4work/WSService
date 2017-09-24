@@ -20,7 +20,7 @@ public class StaxTest {
 
     private static void readXMLByStAX() throws XMLStreamException, FileNotFoundException {
         XMLInputFactory xmlif = XMLInputFactory.newInstance();
-        XMLEventReader xmler = xmlif.createXMLEventReader(StaxTest.class.getResourceAsStream("test.xml"));
+        XMLEventReader xmler = xmlif.createXMLEventReader(StaxTest.class.getResourceAsStream("oneDay.xml"));
         XMLEvent event;
         StringBuffer parsingResult = new StringBuffer();
         while (xmler.hasNext()) {

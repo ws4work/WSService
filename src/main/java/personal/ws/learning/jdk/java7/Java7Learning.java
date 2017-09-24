@@ -28,10 +28,10 @@ public class Java7Learning {
     }
 
     public static void new_switch(){
-        String s = "test";
+        String s = "oneDay";
         switch (s) {
-            case "test" :
-                System.out.println("test");
+            case "oneDay" :
+                System.out.println("oneDay");
             case "test1" :
                 System.out.println("test1");
                 break ;

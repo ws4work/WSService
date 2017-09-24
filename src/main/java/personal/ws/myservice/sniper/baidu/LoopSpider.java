@@ -40,7 +40,7 @@ public class LoopSpider {
 		}
 		//		System.out.println(srcList.size());
 		int size = srcList.size();
-		if ("test".equals(Configuration.MODE)) {
+		if ("oneDay".equals(Configuration.MODE)) {
 			size = 1;
 		}
 		for (int i = 0; i < size; i++) {
@@ -91,7 +91,7 @@ public class LoopSpider {
 		if (content.size() > 0) {
 			Elements classTag = body.getElementsByClass("j_th_tit ");
 			int size = classTag.size();
-			if ("test".equals(Configuration.MODE)) {
+			if ("oneDay".equals(Configuration.MODE)) {
 				size = 1;
 			}
 			for (int i = 0; i < size; i++) {
@@ -132,7 +132,7 @@ public class LoopSpider {
 		//TODO 实际值会发生顺序变化,需要进行判断
 		Elements articlediv = findArticleDiv(body);
 		int size = articlediv.size();
-		if ("test".equals(Configuration.MODE)) {
+		if ("oneDay".equals(Configuration.MODE)) {
 			size = 1;
 		}
 		for (int i = 0; i < size; i++) {
@@ -149,7 +149,7 @@ public class LoopSpider {
 				//每层层主消息
 				Elements cc = thisDiv.getElementsByTag("cc");
 				int ccsize = cc.size();
-				if ("test".equals(Configuration.MODE)) {
+				if ("oneDay".equals(Configuration.MODE)) {
 					ccsize = 1;
 				}
 				for (int j = 0; j < ccsize; j++) {

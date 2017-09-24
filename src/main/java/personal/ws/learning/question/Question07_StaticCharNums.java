@@ -8,7 +8,7 @@ import java.util.Scanner;
  * @date: 2017/9/15
  * @project：WSService
  */
-public class Question7_StaticCharNums {
+public class Question07_StaticCharNums {
 
     /**
      * 【程序7】

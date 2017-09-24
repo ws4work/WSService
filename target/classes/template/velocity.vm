@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Velocity测试</title>
+</head>
+<body>
+    <div class="show">
+        <ul style="list-style-type:none">
+            <li>
+                设置变量
+            </li>
+            <li>
+                #set($myVar='hello')
+                $myVar
+            </li>
+            <li>
+                if/else
+            </li>
+            <li>
+                #if(${info})
+                    <span style="color: red">${info}</span>
+                #else
+                    没有数据
+                #end
+            </li>
+            <li>
+                list
+            </li>
+            #foreach($item in $list)
+            <li>
+                ##单个
+                $item
+                ##计数
+                $velocityCount
+            </li>
+            #end
+            <li>
+
+            </li>
+
+
+        </ul>
+    </div>
+</body>
+</html>

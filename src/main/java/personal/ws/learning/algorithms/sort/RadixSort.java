@@ -10,8 +10,6 @@ import java.util.List;
  * 然后，从最低位开始，依次进行一次排序。
  * 这样从最低位排序一直到最高位排序完成以后,数列就变成一个有序序列。
  * @author: 王上
- * @date: 2017/9/14
- * @project：WSService
  */
 public class RadixSort extends CommonSort {
 

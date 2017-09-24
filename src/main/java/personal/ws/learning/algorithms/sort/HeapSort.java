@@ -16,8 +16,6 @@ import java.util.Arrays;
  * 描述来看，堆排序需要两个过程，一是建立堆，二是堆顶与堆的最后一个元素交换位置。所
  * 以堆排序有两个函数组成。一是建堆的渗透函数，二是反复调用渗透函数实现排序的函数。
  * @author: 王上
- * @date: 2017/9/13
- * @project：WSService
  */
 public class HeapSort extends CommonSort {
 

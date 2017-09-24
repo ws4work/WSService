@@ -6,7 +6,7 @@ package personal.ws.learning.question;
  * @date: 2017/9/15
  * @project：WSService
  */
-public class Question4_PrimeFactorization {
+public class Question04_PrimeFactorization {
 
     /**
      * 【程序4】
@@ -23,7 +23,7 @@ public class Question4_PrimeFactorization {
 
     public static void main(String[] args) {
         String str = "20";
-        Question4_PrimeFactorization q = new Question4_PrimeFactorization();
+        Question04_PrimeFactorization q = new Question04_PrimeFactorization();
         int N;
         N = 0;
         try {

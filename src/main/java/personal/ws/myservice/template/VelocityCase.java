@@ -34,7 +34,7 @@ public class VelocityCase {
     public String show() {
         Velocity.init(loadProperties());
         context = new VelocityContext();
-        context.put("info", "test");
+        context.put("info", "oneDay");
         ArrayList<String> list = new ArrayList<>();
         list.add("num1");
         list.add("num2");

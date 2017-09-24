@@ -9,8 +9,6 @@ import java.util.Arrays;
  * 序表，即把待排序序列分为若干个子序列，每个子序列是有序的。然后再把有序子序列合并
  * 为整体有序序列。
  * @author: 王上
- * @date: 2017/9/13
- * @project：WSService
  */
 public class MergingSort extends CommonSort {
 

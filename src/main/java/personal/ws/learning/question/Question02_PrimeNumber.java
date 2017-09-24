@@ -6,7 +6,7 @@ package personal.ws.learning.question;
  * @date: 2017/9/15
  * @project：WSService
  */
-public class Question2_PrimeNumber {
+public class Question02_PrimeNumber {
 
     /**
      * 【程序2】
@@ -19,7 +19,7 @@ public class Question2_PrimeNumber {
      */
     public static void main(String args[]) {
         int i = 0;
-        Question2_PrimeNumber q = new Question2_PrimeNumber();
+        Question02_PrimeNumber q = new Question02_PrimeNumber();
         for (i = 2; i <= 200; i++)
             if(q.iszhishu(i) == true)
                 System.out.println(i);

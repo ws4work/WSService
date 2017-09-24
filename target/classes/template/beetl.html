@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Beetl测试</title>
+</head>
+<body>
+    <h1>这是Beetl的测试文件.</h1>
+    <p>首先,用户变量获取名字${name!}.</p>
+    <p>其次,用户变量判断性别${sex==1?'男':'女'}.</p>
+    <p>让我们来说说${sex==1?'他':'她'}的 ${userList.~size} 个兄弟姐妹们:</p>
+    <%
+    for(user in userList){
+    %>
+    <p>第${userLP.index}个,${user};</p>
+    <% } %>
+    <!-- 隐藏对象 -->
+    <!--userLP.index 当前的索引，从1开始-->
+    <!--userLP.size 集合的长度-->
+    <!--userLP.first 是否是第一个-->
+    <!--userLP.last 是否是最后一个-->
+    <!--userLP.even 索引是否是偶数-->
+    <!--userLP.odd 索引是否是奇数-->
+    <p>${btb.name}</p>
+    <p>${btb.value}</p>
+    <% var date = date(); %>
+    <!-- 格式化 -->
+    <p>Today is ${date,dateFormat}</p>
+    <p>Today is ${date,dateFormat="yyyy-MM-dd"}.</p>
+    <p>salary is ${salary!,numberFormat="##.##"}</p>
+</body>
+</html>

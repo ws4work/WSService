@@ -6,7 +6,7 @@ package personal.ws.learning.question;
  * @date: 2017/9/15
  * @project：WSService
  */
-public class Question3_NarcissisticNumber {
+public class Question03_NarcissisticNumber {
 
     /**
      * 【程序3】
@@ -20,7 +20,7 @@ public class Question3_NarcissisticNumber {
 
     public static void main(String args[]) {
         int i = 0;
-        Question3_NarcissisticNumber q = new Question3_NarcissisticNumber();
+        Question03_NarcissisticNumber q = new Question03_NarcissisticNumber();
         for (i = 100; i <= 999; i++)
             if(q.shuixianhua(i) == true)
                 System.out.println(i);

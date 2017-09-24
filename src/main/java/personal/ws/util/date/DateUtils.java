@@ -2,6 +2,8 @@ package personal.ws.util.date;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
@@ -29,6 +31,11 @@ public class DateUtils {
 		//		System.out.println(timestamp);
 		//		getTomorrowByDate("2015-07-31");
 		System.out.println(DateToStr1(new Date()));
+		LocalDate ld = LocalDate.now();
+		System.out.println(ld.lengthOfMonth());
+		System.out.println(ld.format(DateTimeFormatter.ofPattern("yyyy-MM-01")));
+		System.out.println(ld.format(DateTimeFormatter.ofPattern("yyyy-MM-"+ld.lengthOfMonth())));
+
 	}
 
 	// 判断两个日期是否交叉
@@ -183,20 +190,7 @@ public class DateUtils {
 			// System.out.println(df.format(endDate.getTime()));
 			endCalendar.setTime(endDate);
 			// 一天
-			if (!df.format(startDate.getTime()).equals(
-					df.format(endDate.getTime()))) {
-				while (true) {
-					startCalendar.add(Calendar.DAY_OF_MONTH, 1);
-					if (startCalendar.getTimeInMillis() < endCalendar
-							.getTimeInMillis()) {
-						// System.out.println(df.format(startCalendar.getTime()));
-						dates.add(df.format(startCalendar.getTime()));
-					} else {
-						break;
-					}
-				}
-				dates.add(df.format(endDate.getTime()));
-			}
+			oneDay(dates, startCalendar, endCalendar, df, startDate, endDate);
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
@@ -258,24 +252,28 @@ public class DateUtils {
 			Date endDate = endCalendar.getTime();
 			// 一天
 			dates.add(df1.format(startDate.getTime()));
-			if (!df1.format(startDate.getTime()).equals(
-					df1.format(endDate.getTime()))) {
-				while (true) {
-					startCalendar.add(Calendar.DAY_OF_MONTH, 1);
-					if (startCalendar.getTimeInMillis() < endCalendar
-							.getTimeInMillis()) {
-						// System.out.println(df.format(startCalendar.getTime()));
-						dates.add(df1.format(startCalendar.getTime()));
-					} else {
-						break;
-					}
-				}
-				dates.add(df1.format(endDate.getTime()));
-			}
+			oneDay(dates, startCalendar, endCalendar, df1, startDate, endDate);
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
 		return dates;
+	}
+
+	private static void oneDay(List<String> dates, Calendar startCalendar, Calendar endCalendar, SimpleDateFormat df1, Date startDate, Date endDate) {
+		if (!df1.format(startDate.getTime()).equals(
+                df1.format(endDate.getTime()))) {
+            while (true) {
+                startCalendar.add(Calendar.DAY_OF_MONTH, 1);
+                if (startCalendar.getTimeInMillis() < endCalendar
+                        .getTimeInMillis()) {
+                    // System.out.println(df.format(startCalendar.getTime()));
+                    dates.add(df1.format(startCalendar.getTime()));
+                } else {
+                    break;
+                }
+            }
+            dates.add(df1.format(endDate.getTime()));
+        }
 	}
 
 	// 获取本周的开始和结束日期

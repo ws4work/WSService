@@ -6,7 +6,7 @@ package personal.ws.learning.question;
  * @date: 2017/9/15
  * @project：WSService
  */
-public class Question1_RabbitNums {
+public class Question01_RabbitNums {
 
     /**
      * 【程序1】

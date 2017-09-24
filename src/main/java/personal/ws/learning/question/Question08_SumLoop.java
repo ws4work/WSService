@@ -10,7 +10,7 @@ import java.io.InputStreamReader;
  * @date: 2017/9/15
  * @project：WSService
  */
-public class Question8_SumLoop {
+public class Question08_SumLoop {
 
     /**
      * 【程序8】

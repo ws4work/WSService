@@ -8,8 +8,6 @@ import personal.ws.learning.algorithms.common.CommonSort;
  * 的增量（d/2）对它进行分组，在每组中再进行直接插入排序。当增量减到 1 时，进行直接
  * 插入排序后，排序完成。
  * @author: 王上
- * @date: 2017/9/13
- * @project：WSService
  */
 public class ShellSort extends CommonSort {
 

@@ -24,7 +24,7 @@ public class Scripting {
     }
 
     public static void testScriptVariables(ScriptEngine engine) throws ScriptException {
-        File file = new File("test.txt");
+        File file = new File("oneDay.txt");
         engine.put("f", file);
         engine.eval("println('Total Space:'+f.getTotalSpace())");
     }

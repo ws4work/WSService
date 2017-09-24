@@ -6,7 +6,7 @@ package personal.ws.learning.question;
  * @date: 2017/9/15
  * @project：WSService
  */
-public class Question9_PerfectNum {
+public class Question09_PerfectNum {
 
     /**
      * 【程序9】
