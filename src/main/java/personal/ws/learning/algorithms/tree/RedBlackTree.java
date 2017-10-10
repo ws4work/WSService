@@ -218,7 +218,3 @@ class Node {
         return super.toString().replaceAll("personal.ws.learning.algorithms.tree.Node@", "");
     }
 }
-
-class RBTree {
-
-}
