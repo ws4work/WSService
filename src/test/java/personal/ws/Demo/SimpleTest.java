@@ -1,9 +1,4 @@
-package personal.ws.SpringBootDemo;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-import java.util.stream.Collectors;
+package personal.ws.Demo;
 
 /**
  * @Description:

@@ -16,13 +16,14 @@ public class FileChannelLearning {
 
     public static String separator = File.separator;
     public static String name = "D:" + separator + "www" + separator + "recharge-manage-bs.2017-09-15.log";
+    public static int B = 1024;
 
     public static void main(String args[]) throws IOException {
         RandomAccessFile aFile = new RandomAccessFile(name, "rw");
         FileChannel inChannel = aFile.getChannel();
 
-        int KB = 1024;
-        ByteBuffer buf = ByteBuffer.allocate(4 * KB);
+
+        ByteBuffer buf = ByteBuffer.allocate(4 * B);
 
         int bytesRead = inChannel.read(buf);
         while (bytesRead != -1) {

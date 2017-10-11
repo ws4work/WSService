@@ -33,8 +33,8 @@
         </dependency>
         <!-- 增加mongodb支持 -->
         <!--<dependency>-->
-            <!--<groupId>org.springframework.boot</groupId>-->
-            <!--<artifactId>spring-boot-starter-data-mongodb</artifactId>-->
+        <!--<groupId>org.springframework.boot</groupId>-->
+        <!--<artifactId>spring-boot-starter-data-mongodb</artifactId>-->
         <!--</dependency>-->
         <!-- https://mvnrepository.com/artifact/net.sf.json-lib/json-lib -->
         <dependency>
@@ -43,12 +43,18 @@
             <version>2.4</version>
             <classifier>jdk15</classifier>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver -->
-        <!--<dependency>-->
-            <!--<groupId>org.mongodb</groupId>-->
-            <!--<artifactId>mongo-java-driver</artifactId>-->
-            <!--<version>3.5.0</version>-->
-        <!--</dependency>-->
+        <!-- mongodb -->
+        <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-mongodb -->
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-mongodb</artifactId>
+            <version>1.10.7.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongo-java-driver</artifactId>
+            <version>3.6.0-beta1</version>
+        </dependency>
 
         <dependency>
             <groupId>org.jsoup</groupId>
