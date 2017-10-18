@@ -3,10 +3,7 @@ package personal.ws.learning.jdk.java9;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -31,6 +28,13 @@ public class Java9Learning {
         Set<Integer> integers = Set.of(1, 2, 3);
         //通过工厂构造List
         List<String> strings = List.of("a", "b", "c");
+
+        Map<String,Object> map = Map.of(
+                "p1", new String[]{"0.01", "1", "10"},
+                "p10", new String[]{"0.01", "10", "105"},
+                "p50", new String[]{"0.01", "50", "540"},
+                "p100", new String[]{"0.01", "100", "1100"},
+                "p200", new String[]{"0.01", "200", "2240"});
     }
 
     public void StreamNewLearning() {

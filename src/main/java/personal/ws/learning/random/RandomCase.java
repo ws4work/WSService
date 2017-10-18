@@ -42,11 +42,17 @@ public class RandomCase {
      */
     @Test
     public void randomMethod(){
+        //非固定seed将会根据System.nanoTime作为seed产生随机数
         Random random = new Random();
         IntStream ints = random.ints(20);
 //        long count = ints.count();
 //        System.out.println(count);
         ints.filter(num->num>1178124816).forEach(num->{num=Math.abs(num);System.out.println(num);});
+
+        //固定seed将会得到相同的随机数值;
+        Random solid = new Random(1000);
+        solid.ints(3).forEach(System.out::println);
+
     }
     
 }

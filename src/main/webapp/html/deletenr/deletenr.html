@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字符串转换</title>
+    <style type="text/css">
+        textarea {
+            height: 250px;
+            width: 500px;
+        }
+
+        .one_line {
+            display: block;
+        }
+    </style>
+    <script type="application/javascript">
+        function change(reg) {
+            var input = document.getElementsByName('input')[0]
+            var s = input.value
+            var str = s.replace(reg, "")
+            document.getElementsByName("output")[0].value = str
+        }
+        function validate() {
+
+        }
+    </script>
+</head>
+<body>
+
+<div class="one_line">
+    <textarea name="input"></textarea>
+</div>
+
+<div class="one_line">
+    <textarea name="output"></textarea>
+</div>
+
+<div class="one_line">
+    <button onclick="change(/(\n)+|(\r\n)+/g)">去换行</button>
+    <button onclick="change(/ /g)">去空格</button>
+    <button onclick="change(/[\r\n|\s]/g)">去空格以及换行</button>
+</div>
+
+</body>
+</html>
