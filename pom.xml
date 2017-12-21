@@ -19,7 +19,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>1.9</java.version>
+        <java.version>1.8</java.version>
     </properties>
 
     <dependencies>
@@ -43,18 +43,12 @@
             <version>2.4</version>
             <classifier>jdk15</classifier>
         </dependency>
-        <!-- mongodb -->
-        <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-mongodb -->
-        <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-mongodb</artifactId>
-            <version>1.10.7.RELEASE</version>
-        </dependency>
-        <dependency>
-            <groupId>org.mongodb</groupId>
-            <artifactId>mongo-java-driver</artifactId>
-            <version>3.6.0-beta1</version>
-        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver -->
+        <!--<dependency>-->
+        <!--<groupId>org.mongodb</groupId>-->
+        <!--<artifactId>mongo-java-driver</artifactId>-->
+        <!--<version>3.5.0</version>-->
+        <!--</dependency>-->
 
         <dependency>
             <groupId>org.jsoup</groupId>
@@ -87,12 +81,6 @@
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
 
-        <!-- beetl-jsonTool引擎 -->
-        <dependency>
-            <groupId>com.ibeetl</groupId>
-            <artifactId>btjson</artifactId>
-            <version>0.94</version>
-        </dependency>
         <!-- beetl模板引擎 -->
         <dependency>
             <groupId>com.ibeetl</groupId>
@@ -105,6 +93,44 @@
             <artifactId>velocity-engine-core</artifactId>
             <version>2.0</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>1.5.9.RELEASE</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.6</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.3</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/commons-httpclient/commons-httpclient -->
+        <!--<dependency>-->
+        <!--<groupId>commons-httpclient</groupId>-->
+        <!--<artifactId>commons-httpclient</artifactId>-->
+        <!--<version>3.1</version>-->
+        <!--</dependency>-->
+        <!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-core -->
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-core</artifactId>
+            <version>7.2.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-queryparser -->
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-queryparser</artifactId>
+            <version>7.2.0</version>
+        </dependency>
+
+
     </dependencies>
 
     <build>
